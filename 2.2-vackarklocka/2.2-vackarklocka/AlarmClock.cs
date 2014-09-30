@@ -23,7 +23,23 @@ namespace _2._2_vackarklocka
                 {
                     throw new ArgumentException();
                 }
+                _alarmHour = value; 
             }
         }
+
+        public int AlarmMinute
+        {
+            get { return _alarmMinute; }
+
+            set
+            {
+                if (value > 59 || value < 0)
+                {
+                    throw new ArgumentException();
+                }
+                _alarmMinute = value;
+            }
+        }
+
     }
 }
