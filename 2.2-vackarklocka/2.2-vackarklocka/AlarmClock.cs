@@ -89,10 +89,16 @@ namespace _2._2_vackarklocka
         public bool TickTock()
         {
             _minute++;
+
             if (_minute == 60)
             {
                 _minute = 0;
                 _hour++;
+
+                if (_hour == 24)
+                {
+                    _hour = 0;
+                }
             }
 
             if (_hour == _alarmHour)
@@ -103,6 +109,11 @@ namespace _2._2_vackarklocka
                 }
             }
             return false;
+        }
+
+        public string ToString()
+        {
+            return String.Format("{0}:{1}", _hour, _minute);
         }
     }
 }
