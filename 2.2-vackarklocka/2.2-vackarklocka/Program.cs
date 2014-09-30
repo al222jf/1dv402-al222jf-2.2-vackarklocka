@@ -10,6 +10,16 @@ namespace _2._2_vackarklocka
     {
         static void Main(string[] args)
         {
+            AlarmClock alarm = new AlarmClock();
+            string HorizontalLine;
+            
+        }
+        private void Run(AlarmClock ac, int minutes)
+        {
+            for (int i = 0; i < minutes; i++)
+            {
+               
+            }
         }
     }
 }
