@@ -40,6 +40,7 @@ namespace _2._2_vackarklocka
                 _alarmMinute = value;
             }
         }
+
         public int Hour
         {
             get { return _hour; }
@@ -51,6 +52,20 @@ namespace _2._2_vackarklocka
                     throw new ArgumentException();
                 }
                 _hour = value;
+            }
+        }
+
+        public int Minute
+        {
+            get { return _minute; }
+
+            set
+            {
+                if (value > 59 || value < 0)
+                {
+                    throw new ArgumentException();
+                }
+                _minute = value;
             }
         }
     }
