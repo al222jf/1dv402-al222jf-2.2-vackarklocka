@@ -68,5 +68,41 @@ namespace _2._2_vackarklocka
                 _minute = value;
             }
         }
+        public AlarmClock()
+        {
+
+        }
+
+        public AlarmClock(int hour, int minute)
+        {
+
+        }
+
+        public AlarmClock(int hour, int minute, int alarmHour, int alarmMinute)
+        {
+            hour = _hour;
+            minute = _minute;
+            alarmHour = _alarmHour;
+            alarmMinute = _alarmMinute;
+        }
+
+        public bool TickTock()
+        {
+            _minute++;
+            if (_minute == 60)
+            {
+                _minute = 0;
+                _hour++;
+            }
+
+            if (_hour == _alarmHour)
+            {
+                if (_minute == _alarmMinute)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
