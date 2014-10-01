@@ -13,16 +13,34 @@ namespace _2._2_vackarklocka
         private int _hour;
         private int _minute;
 
+        public AlarmClock() : this(0, 0)
+        {
+
+        }
+
+        public AlarmClock(int hour, int minute) : this(hour, minute, 0, 0)
+        {
+
+        }
+
+        public AlarmClock(int hour, int minute, int alarmHour, int alarmMinute)
+        {
+            Hour = hour;
+            Minute = minute;
+            AlarmHour = alarmHour;
+            AlarmMinute = alarmMinute;
+        }
+
         public int AlarmHour
         {
             get { return _alarmHour; }
-
             set
             {
                 if (value > 23 || value < 0)
                 {
                     throw new ArgumentException();
                 }
+
                 _alarmHour = value; 
             }
         }
@@ -30,13 +48,13 @@ namespace _2._2_vackarklocka
         public int AlarmMinute
         {
             get { return _alarmMinute; }
-
             set
             {
                 if (value > 59 || value < 0)
                 {
                     throw new ArgumentException();
                 }
+
                 _alarmMinute = value;
             }
         }
@@ -44,13 +62,13 @@ namespace _2._2_vackarklocka
         public int Hour
         {
             get { return _hour; }
-
             set
             {
                 if (value > 23 || value < 0)
                 {
                     throw new ArgumentException();
                 }
+
                 _hour = value;
             }
         }
@@ -58,62 +76,52 @@ namespace _2._2_vackarklocka
         public int Minute
         {
             get { return _minute; }
-
             set
             {
                 if (value > 59 || value < 0)
                 {
                     throw new ArgumentException();
                 }
+
                 _minute = value;
             }
         }
-        public AlarmClock()
-        {
-
-        }
-
-        public AlarmClock(int hour, int minute)
-        {
-
-        }
-
-        public AlarmClock(int hour, int minute, int alarmHour, int alarmMinute)
-        {
-            hour = _hour;
-            minute = _minute;
-            alarmHour = _alarmHour;
-            alarmMinute = _alarmMinute;
-        }
+        
 
         public bool TickTock()
         {
-            _minute++;
-
-            if (_minute == 60)
+            
+            if (_minute < 59)
+            {
+                _minute++;
+            }
+            else
             {
                 _minute = 0;
-                _hour++;
+            }
 
-                if (_hour == 24)
+            if (_minute == 0)
+            {
+                if (_hour < 23)
+                {
+                    _hour++;
+                }
+                else
                 {
                     _hour = 0;
                 }
             }
-
-            if (_hour == _alarmHour)
+            if (_hour == _alarmHour && _minute == _alarmMinute)
             {
-                if (_minute == _alarmMinute)
-                {
-                    return true;
-                }
+                return true;
             }
+
             return false;
         }
 
         public string ToString()
         {
-            return String.Format("{0}:{1} <{2}:{3}>", _hour, _minute, _alarmHour, _alarmMinute);
+            return String.Format("{0}:{1:00} <{2}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute);
         }
     }
 }

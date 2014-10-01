@@ -1,1 +1,6 @@
 P:\Git\1dv402-al222jf-2.2-vackarklocka\2.2-vackarklocka\2.2-vackarklocka\bin\Debug\2.2-vackarklocka.exe.config
+P:\Git\1dv402-al222jf-2.2-vackarklocka\2.2-vackarklocka\2.2-vackarklocka\bin\Debug\2.2-vackarklocka.exe
+P:\Git\1dv402-al222jf-2.2-vackarklocka\2.2-vackarklocka\2.2-vackarklocka\bin\Debug\2.2-vackarklocka.pdb
+P:\Git\1dv402-al222jf-2.2-vackarklocka\2.2-vackarklocka\2.2-vackarklocka\obj\Debug\2.2-vackarklocka.csprojResolveAssemblyReference.cache
+P:\Git\1dv402-al222jf-2.2-vackarklocka\2.2-vackarklocka\2.2-vackarklocka\obj\Debug\2.2-vackarklocka.exe
+P:\Git\1dv402-al222jf-2.2-vackarklocka\2.2-vackarklocka\2.2-vackarklocka\obj\Debug\2.2-vackarklocka.pdb
