@@ -42,6 +42,18 @@ namespace _2._2_vackarklocka
             a = new AlarmClock(23, 58, 7, 35);
             Run(a, 13);
 
+            Console.WriteLine(HorizontalLine);
+            Console.WriteLine("Test 5. \nStäller befintligt AlarmClock-objekt till tiden 6:12 och alarmtiden till 6:15\n");
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine(" ╔══════════════════════════════════════╗ ");
+            Console.WriteLine(" ║       Väckarklockan URLED <TM>       ║ ");
+            Console.WriteLine(" ╚══════════════════════════════════════╝ ");
+            Console.ResetColor();
+            
+            a = new AlarmClock(6, 12, 6, 15);
+            Run(a, 6);
+
         }
         private static void Run(AlarmClock ac, int minutes)
         {
@@ -49,6 +61,7 @@ namespace _2._2_vackarklocka
             {
                 ac.TickTock();
                 Console.WriteLine(ac.ToString());
+                
             }
 
         }

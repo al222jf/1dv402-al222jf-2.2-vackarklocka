@@ -121,7 +121,9 @@ namespace _2._2_vackarklocka
 
         public string ToString()
         {
-            return String.Format("{0}:{1:00} <{2}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute);
+
+            return String.Format("{0,10}:{1:00} <{2}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute);
+            
         }
     }
 }
