@@ -97,6 +97,39 @@ namespace _2._2_vackarklocka
             //Test 7
             Console.WriteLine(HorizontalLine);
             ViewTestHeader("Test 7. \nTestar konstruktorer så att undantag kastas då tid och alarmtid tildelas felaktiga värden.\n");
+            
+            try
+            {
+                a = new AlarmClock(25, 0);
+            }
+            catch
+            {
+                ViewErrorMessage("Timmen är inte i intervallet 0-23");
+            }
+            try
+            {
+                a = new AlarmClock(0, 30);
+            }
+            catch
+            {
+                ViewErrorMessage("Minuten är inte i intervallet 0-59");
+            }
+            try
+            {
+                a = new AlarmClock(0, 0, 25, 0);
+            }
+            catch
+            {
+                ViewErrorMessage("Alarmtimmen är inte i intervallet 0-23");
+            }
+            try
+            {
+                a = new AlarmClock(0, 0, 0, 30);
+            }
+            catch
+            {
+                ViewErrorMessage("Alarmminuten är inte i intervallet 0-59");
+            }
 
            
         }
