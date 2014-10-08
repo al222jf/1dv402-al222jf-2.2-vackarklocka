@@ -98,10 +98,6 @@ namespace _2._2_vackarklocka
             else
             {
                 _minute = 0;
-            }
-
-            if (_minute == 0)
-            {
                 if (_hour < 23)
                 {
                     _hour++;
@@ -111,15 +107,11 @@ namespace _2._2_vackarklocka
                     _hour = 0;
                 }
             }
-            if (_hour == _alarmHour && _minute == _alarmMinute)
-            {
-                return true;
-            }
 
-            return false;
+            return _hour == _alarmHour && _minute == _alarmMinute;
         }
 
-        public string ToString()
+        public override string ToString()
         {
             return String.Format("{0,10}:{1:00} <{2}:{3:00}>", _hour, _minute, _alarmHour, _alarmMinute);
         }

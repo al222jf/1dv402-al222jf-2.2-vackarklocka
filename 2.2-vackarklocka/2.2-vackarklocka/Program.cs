@@ -12,24 +12,24 @@ namespace _2._2_vackarklocka
         {
             string HorizontalLine = "\n════════════════════════════════════════════════════════════════════════════";
 
-            AlarmClock a = new AlarmClock();
+            AlarmClock ac = new AlarmClock();
 
             //Test 1
             Console.WriteLine(HorizontalLine);
             ViewTestHeader("Test 1. \nTest av standardkonstruktorn.\n");
-            Console.WriteLine(a.ToString());
+            Console.WriteLine(ac.ToString());
 
             //Test 2
-            a = new AlarmClock(9, 42);
+            ac = new AlarmClock(9, 42);
             Console.WriteLine(HorizontalLine);
             ViewTestHeader("Test 2. \nTest av konstruktorn med två parametrar, <9, 42>.\n");
-            Console.WriteLine(a.ToString());
+            Console.WriteLine(ac.ToString());
 
             //Test 3
-            a = new AlarmClock(13, 27, 7, 35);
+            ac = new AlarmClock(13, 27, 7, 35);
             Console.WriteLine(HorizontalLine);
             ViewTestHeader("Test 3. \nTest av konstruktorn med fyra parametrar, <13, 24, 7, 35>.\n");
-            Console.WriteLine(a.ToString());
+            Console.WriteLine(ac.ToString());
 
             //Test 4
             Console.WriteLine(HorizontalLine);
@@ -41,8 +41,8 @@ namespace _2._2_vackarklocka
             Console.WriteLine(" ╚══════════════════════════════════════╝ ");
             Console.ResetColor();
            
-            a = new AlarmClock(23, 58, 7, 35);
-            Run(a, 13);
+            ac = new AlarmClock(23, 58, 7, 35);
+            Run(ac, 13);
 
             //Test 5
             Console.WriteLine(HorizontalLine);
@@ -54,8 +54,8 @@ namespace _2._2_vackarklocka
             Console.WriteLine(" ╚══════════════════════════════════════╝ ");
             Console.ResetColor();
             
-            a = new AlarmClock(6, 12, 6, 15);
-            Run(a, 6);
+            ac = new AlarmClock(6, 12, 6, 15);
+            Run(ac, 6);
 
             //Test 6
             Console.WriteLine(HorizontalLine);
@@ -63,7 +63,7 @@ namespace _2._2_vackarklocka
 
             try
             {
-                a.Hour = 25;
+                ac.Hour = 25;
             }
             catch
             {
@@ -71,7 +71,7 @@ namespace _2._2_vackarklocka
             }
             try
             {
-                a.Minute = 61;
+                ac.Minute = 61;
             }
             catch
             {
@@ -79,7 +79,7 @@ namespace _2._2_vackarklocka
             }
             try
             {
-                a.AlarmHour = 25;
+                ac.AlarmHour = 25;
             }
             catch
             {
@@ -87,7 +87,7 @@ namespace _2._2_vackarklocka
             }
             try
             {
-                a.AlarmMinute = 61;
+                ac.AlarmMinute = 61;
             }
             catch
             {
@@ -100,7 +100,7 @@ namespace _2._2_vackarklocka
             
             try
             {
-                a = new AlarmClock(25, 0);
+                ac = new AlarmClock(25, 0);
             }
             catch
             {
@@ -108,7 +108,7 @@ namespace _2._2_vackarklocka
             }
             try
             {
-                a = new AlarmClock(0, 30);
+                ac = new AlarmClock(0, 30);
             }
             catch
             {
@@ -116,7 +116,7 @@ namespace _2._2_vackarklocka
             }
             try
             {
-                a = new AlarmClock(0, 0, 25, 0);
+                ac = new AlarmClock(0, 0, 25, 0);
             }
             catch
             {
@@ -124,7 +124,7 @@ namespace _2._2_vackarklocka
             }
             try
             {
-                a = new AlarmClock(0, 0, 0, 30);
+                ac = new AlarmClock(0, 0, 0, 30);
             }
             catch
             {
