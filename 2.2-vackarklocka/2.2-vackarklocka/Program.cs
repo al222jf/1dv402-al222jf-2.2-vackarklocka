@@ -138,8 +138,6 @@ namespace _2._2_vackarklocka
 
             for (int i = 0; i < minutes; i++)
             {
-                
-
                 if (ac.TickTock() == true)
                 {
                     Console.BackgroundColor = ConsoleColor.Blue;
@@ -149,14 +147,15 @@ namespace _2._2_vackarklocka
                 
                 Console.WriteLine(ac.ToString()); 
             }
-
         }
+
         private static void ViewErrorMessage(string message)
         {
             Console.BackgroundColor = ConsoleColor.Red;
             Console.WriteLine(message);
             Console.ResetColor();
         }
+
         private static void ViewTestHeader(string header)
         {
             Console.WriteLine(header);
